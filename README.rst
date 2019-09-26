@@ -33,7 +33,7 @@ Usage
 =====
 
 For testing purposes the application can be started with ``run.py``.
-For production a WSGI server like ``uWSGI`` or ``mode_wsgi`` is recommended.
+For production a WSGI server like ``uWSGI`` or ``mod_wsgi`` is recommended.
 
 
 Contributing
