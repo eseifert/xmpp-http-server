@@ -14,9 +14,9 @@ def security_headers(func):
     def wrapper(*args, **kwargs):
         response = make_response(func(*args, **kwargs))
         response.headers['X-Content-Type-Options'] = 'nosniff'
-        response.headers['Content-Security-Policy'] = "default-src 'none'"
-        response.headers['X-Content-Security-Policy'] = "default-src 'none'"
-        response.headers['X-WebKit-CSP'] = "default-src 'none'"
+        response.headers['Content-Security-Policy'] = "default-src 'none'; frame-ancestors 'none'"
+        response.headers['X-Content-Security-Policy'] = "default-src 'none'; frame-ancestors 'none'"
+        response.headers['X-WebKit-CSP'] = "default-src 'none'; frame-ancestors 'none'"
         return response
     return wrapper
 
