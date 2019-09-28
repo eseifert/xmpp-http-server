@@ -25,8 +25,26 @@ Installation
 
         ./venv/bin/pip install -r requirements.txt
 
-4.  Create a configuration file with the name ``config.py`` in the root of the
-    code directory. An example ``config.py.example`` is provided.
+
+Configuration
+=============
+
+A configuration file with the name ``config.py`` must exist in the root of the
+code directory. An example ``config.py.example`` with all available settings is
+provided in the repository.
+
+The following settings can be changed:
+
+``SECRET_KEY``
+    Required. It must have the same value as the setting in the
+    ``mod_http_upload_external`` configuration.
+
+``XMPP_HTTP_UPLOAD_ROOT``
+    Required. Path to the root directory where all files will be stored.
+
+``XMPP_HTTP_UPLOAD_USE_CORS``
+    Optional. Flag to toggle CORS headers, which are required by web
+    interfaces.
 
 
 Usage
