@@ -2,3 +2,5 @@
 SECRET_KEY = b'my_secret_key'
 # This is where the files will be stored
 XMPP_HTTP_UPLOAD_ROOT = '/path/to/files'
+# Provide CORS headers for web interfaces
+XMPP_HTTP_UPLOAD_USE_CORS = True

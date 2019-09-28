@@ -17,6 +17,11 @@ def security_headers(func):
         response.headers['Content-Security-Policy'] = "default-src 'none'; frame-ancestors 'none'"
         response.headers['X-Content-Security-Policy'] = "default-src 'none'; frame-ancestors 'none'"
         response.headers['X-WebKit-CSP'] = "default-src 'none'; frame-ancestors 'none'"
+        if current_app.config.get('XMPP_HTTP_UPLOAD_USE_CORS'):
+            response.headers['Access-Control-Allow-Origin'] = '*'
+            response.headers['Access-Control-Allow-Methods'] = 'OPTIONS, HEAD, GET, PUT'
+            response.headers['Access-Control-Allow-Headers'] = 'Authorization, Content-Type'
+            response.headers['Access-Control-Allow-Credentials'] = 'true'
         return response
     return wrapper
 
