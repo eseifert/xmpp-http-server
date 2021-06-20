@@ -50,7 +50,7 @@ The following settings can be changed:
 Usage
 =====
 
-For testing purposes the application can be started with ``run.py``.
+For testing purposes the application can be started with ``run.py`` or simply ``flask run``.
 For production a WSGI server like ``uWSGI`` or ``mod_wsgi`` is recommended.
 
 
