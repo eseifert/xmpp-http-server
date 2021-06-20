@@ -8,6 +8,11 @@ It is supposed to be used with Prosody’s community module
 `http_upload_external <https://modules.prosody.im/mod_http_upload_external.html>`__.
 Both, version 1 and 2 of the auth token validation are supported.
 
+Requirements
+============
+
+To run this application Python 3.6 or higher is required.
+
 Installation
 ============
 
